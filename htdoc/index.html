@@ -74,19 +74,52 @@
       <div class="mdl-layout--large-screen-only mdl-layout__header-row">
       </div>
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-        <a href="#mirage" class="mdl-layout__tab is-active">Mirage</a>
+        <a href="#config" class="mdl-layout__tab is-active">Configs</a>
+        <a href="#mirage" class="mdl-layout__tab">Mirage</a>
         <a href="#overpass" class="mdl-layout__tab">Overpass</a>
-        <a href="#mirage" class="mdl-layout__tab">Inferno</a>
-        <a href="#mirage" class="mdl-layout__tab">Train</a>
+        <a href="#inferno" class="mdl-layout__tab">Inferno</a>
+        <a href="#train" class="mdl-layout__tab">Train</a>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <!-- Mirage Strat Default A-->
-      <div class="mdl-layout__tab-panel is-active" id="mirage">
+      <!-- ##################################################### CONFIG ############################################### -->
+      <div class="mdl-layout__tab-panel is-active" id="config">
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="autoexec">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+              <h4 class="mdl-cell mdl-cell--12-col">Autoexec</h4>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Allgemein</h5>
+                Die Autoexec ist eine Datei die zu Anfang geladen wird und beinhaltet alle möglichen Einstellung bezüglich des Spiels. Diese ist besonders wichtig in Bezug auf den <a href="#jumpthrow_bind">Jumpthrow Bind</a>. 
+            </div>
+          </div>
+        </section>
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="jumpthrow_bind">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+              <h4 class="mdl-cell mdl-cell--12-col">Jumpthrow Bind</h4>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Allgemein</h5>
+                Der Jumpthrow Bind wird benötigt um einen Sprung auszuführen, bei welchem die Ultility am höchsten Punkt losgelassen wird.
+                Hierfür wird folgendes Skript in der <a href="#autoexec">Autoexec</a> benötigt. 
+                <pre>
+  alias "+jumpthrow" "+jump;-attack"
+  alias "-jumpthrow" "-jump"
+  bind "x" "+jumpthrow"
+                </pre>
+                "x" steht hierbei für eine frei wählbare Taste. Um diesen Bind zu benutzen wählt man die Utility aus die man werfen möchte, hält die linke Maustaste gedrückt um sie zu ziehen und wift diese dann via der gewählten Taste (hier "x").
+            </div>
+          </div>
+        </section>
+        </div>
+      
+
+        <!-- ##################################################### MIRAGE ############################################### -->
+      <div class="mdl-layout__tab-panel" id="mirage">
         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <div class="mdl-card mdl-cell mdl-cell--12-col">
             <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-              <h4 class="mdl-cell mdl-cell--12-col">Default A</h4>
+              <h4 class="mdl-cell mdl-cell--12-col">Strategie: Default A</h4>
               <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                 <div class="section__circle-container__circle mdl-color--grey-100"></div>
               </div>
@@ -140,13 +173,13 @@
         <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <div class="mdl-card mdl-cell mdl-cell--12-col">
             <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-              <h4 class="mdl-cell mdl-cell--12-col">Default B</h4>
+              <h4 class="mdl-cell mdl-cell--12-col">Strategie: Default B</h4>
               <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                 <div class="section__circle-container__circle mdl-color--grey-100"></div>
               </div>
               <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                 <h5>Allgemein</h5>
-                Ziel ist es, einen sicheren Plant zu bekommen. Dafür wird die potenzielle AWP in CT, sowie Jungle und Connector weggesmoked. Molotov 4 ist optional und wird von einem der pushenden auf die Site pushenden Spieler ins Unterholz geworfen.
+                Die Herausfoderung ist lebend auf die Site zu gelangen. Rechnen muss man mit einerm Spieler an Van und/oder Bench mit einer Rifle der schnell auf Backsite zurückfallen kann. Darüber hinaus sind Window und Short für Rifle sowie AWP geeignet und somit zu erwarten.
                 </br>
                 <div class="mdl-grid">
                   <img data-enlargable class="mdl-cell mdl-cell--3-col" style="cursor: zoom-in" src="images/mirage/mirage_default_b.png" />
@@ -157,14 +190,14 @@
                 <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
               </div>
               <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                <h5>Spieler 1: CT Smoke</h5>
-                Der erste Spieler wirft die CT Smoke aus dem Spawn und begibt sich dann in Richtung Rampe</a>. <a href="#ct_smoke">Siehe lineup</a>
+                <h5>Spieler 1: Popflash window</h5>
+                Der erste Spieler wirft die die Popflash durch das Fenster und versucht möglichst schnell dieses zu passieren</a>. <a href="#window_b_flash">Siehe lineup</a>
               </div>
               <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                 <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
               </div>
               <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                <h5>Spieler 2: Jungle Smoke</h5>
+                <h5>Spieler 2: Window Smoke</h5>
                 Der zweite Spieler geht nach oben um die Jungle Smoke zu werfen, aimt aber davor die Rampe mit ab um etwaige pushes abzufangen. Im Anschluss wirft er die Jungle Smoke und begibt sich dann in Richtung Rampe. </a>. Er pusht nach dem poppen der Smoke mit auf die Site. <a href="#jungle_smoke">Siehe lineup</a>
               </div>
               <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
@@ -233,17 +266,140 @@
                     <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/jungle_3.jpg" />
                 </div>
               </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/flash.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>B window popflash</h5>
+                Laufe in einem Winkel wie in Bild 1 auf den Pfeiler zu. Werfe die Flash im rennen. Danach sollte die Flash wie in Bild 3 aus dem Fenster landen. In einem gut gewählten Winkel springt sie noch einmal auf der Unterkante des Fensters ab.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_flash_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_flash_2.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Window B smoke</h5>
+                Laufe komplett in die in Bild 1 gezeigte Ecke. Drehe dich um 180 Grad und ziele auf den Vorsprungs wie in Bild 2. Danach jumpthrow. Diese Smoke blockt das Fenster von Market auf der B Site.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/window_b_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/window_b_2.jpg" />                    
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Bench B smoke</h5>
+                Laufe gegen den in Bild 1 gezeigte Pfeiler. Drehe dich um 90 Grad nach rechts und ziele auf den Vorsprungs wie in Bild 2. Danach left click throw. Diese Smoke blockt den Spieler an Bench, allerdings kann dieser dort trotzdem weiterhin stehen.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_bench_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_bench_2.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_bench_3.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_bench_4.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Short B smoke</h5>
+                Laufe gegen das Fenster wie in Bild 1 + 2 gezeigt. Drehe dich um 90 Grad nach links und ziele nach oben wie in Bild 2. Danach left click throw. Diese Smoke blockt von Site aus gesehen den linken Torbogen ab.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_2.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_3.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_4.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Short B deep smoke</h5>
+                Springe auf die Müllsäcke und laufe gegen das Brett wie in Bild 1. Drehe dich um 180 Grad und ziele auf den Vorsprungs wie in Bild 2. Danach jumpthrow. Diese Smoke blockt Spieler die Short von nahe Ladder halten.<br>
+                <div class="mdl-grid">
+                  <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_deep_1.jpg" />
+                  <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_deep_2.jpg" />
+                  <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_b_short_deep_3.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Mid One-Way smoke</h5>
+                Laufe wie in Bild 1 + 2 zu sehen auf die gezeigte Bodenwelle. Drehe dich um 180 Grad. Geh in die Hocke und ziele auf den Vorsprungs wie in Bild 3. Danach left click throw. Laufe nun auf die Müllsäcke aus Bild 4. Die Kante der Smoke gibt nun eine One-Way Richtung Window.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_one_way_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_one_way_2.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_one_way_3.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_one_way_4.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_one_way_5.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/molotov.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Connector Molotov</h5>
+                Renne in die Mitte und ziele auf die in Bild 1 zu sehende Kante. Danach Runthrow. Dieser Molotov blockt Connector Spieler früh in der Runde und wird gerne geschmissen bevor die Mitte Smokes poppen. Wichtig ist, dass man nicht zu weit in die Mitte läuft, um nicht offen für Window zu stehen.</br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_connector_molo_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_connector_molo_2.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Short deep Smoke</h5>
+                Laufe in die in Bild 1 gezeigte Ecke. Drehe dich um 180 Grad und ziele an die obere Kante wie in Bild 2. Danach Jumpthrow. Die Smoke landet tief in mid short wie in Bild 3 zu sehen.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_short_deep_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_short_deep_2.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/mirage_mid_short_deep_3.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Top Mid Smoke</h5>
+                Springe auf den Mülleimer im T Spawn wie in Bild 1. Schaue nach oben und aime an das Ende der Antenne wie in Bild 2. Danach left click throw. Diese Smoke kann genutzt werden um zu upper mid zu crossen.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/top_mid_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/top_mid_2.jpg" />
+                </div>
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <img class="section__circle-container__circle mdl-color--primary" src="images/smoke.png" />
+              </div>
+              <div id="jungle_smoke" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Window Smoke (128 tick only)</h5>
+                Laufe neben den Mülleimer ganz in die Ecke wie in Bild 1. Bewege dich nicht und ziele auf die Tür wie in Bild 2. Halte die D Taste (WASD vorrausgesetzt) gedrückt und währendessen Jumpthrow. Diese Smoked das Window in mid wie in Bild 3 zu sehen. Diese Smoke benötigt etwas Übungs.<br>
+                <div class="mdl-grid">
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/window_1.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/window_2.jpg" />
+                    <img data-enlargable class="mdl-cell mdl-cell--1-col" style="cursor: zoom-in" src="images/mirage/window_3.jpg" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
-      
+      <!-- ##################################################### OVERPASS ############################################### -->
       <div class="mdl-layout__tab-panel" id="overpass">
         
       </div>
+      <!-- ##################################################### Inferno ############################################### -->
       <div class="mdl-layout__tab-panel" id="inferno">
         
       </div>
+
+      <!-- ##################################################### Train ############################################### -->
       <div class="mdl-layout__tab-panel" id="train">
         
       </div>
